@@ -91,15 +91,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const login = async () => {
     if (isSupabaseConfigured && supabase) {
-        const cleanUrl = new URL(window.location.href);
-        cleanUrl.search = '';
-        cleanUrl.hash = '';
-        const redirectUrl = cleanUrl.toString();
-        
         await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-              redirectTo: redirectUrl,
               queryParams: {
                 prompt: 'select_account'
               }
