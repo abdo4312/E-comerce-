@@ -1,0 +1,5 @@
+{
+  "name": "E-Library Management System",
+  "description": "A comprehensive e-library system with a modern user interface for browsing books, managing a shopping cart, and placing orders for pickup. It features a streamlined checkout process with phone number validation.",
+  "requestFramePermissions": []
+}
